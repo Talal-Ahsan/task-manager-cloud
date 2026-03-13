@@ -1,0 +1,19 @@
+{
+  "name": "task-manager-cloud",
+  "version": "1.0.0",
+  "description": "Task Manager Cloud Assignment",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "ejs": "^5.0.1",
+    "express": "^5.2.1",
+    "mysql2": "^3.19.1"
+  }
+}

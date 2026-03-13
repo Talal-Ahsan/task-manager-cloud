@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>All Tasks</title>
+
+<link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+<div class="nav-title">Task Manager</div>
+
+<div class="nav-links">
+<a href="/">Home</a>
+<a href="/tasks">Tasks</a>
+</div>
+</nav>
+
+<div class="container">
+
+<h1>Your Tasks</h1>
+
+<% if (tasks.length === 0) { %>
+
+<p>No tasks yet.</p>
+
+<% } else { %>
+
+<ul class="task-list">
+
+<% tasks.forEach(task => { %>
+
+<li class="task-item">
+
+<span><%= task.task %></span>
+
+<a class="delete-btn" href="/delete/<%= task.id %>">
+Delete
+</a>
+
+</li>
+
+<% }) %>
+
+</ul>
+
+<% } %>
+
+</div>
+
+</body>
+</html>
