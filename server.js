@@ -28,7 +28,23 @@ db.connect((err) => {
         console.log("Database connection failed");
         throw err;
     }
+
     console.log("Database Connected");
+
+    const createTableQuery = `
+        CREATE TABLE IF NOT EXISTS tasks (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            task VARCHAR(255) NOT NULL
+        )
+    `;
+
+    db.query(createTableQuery, (tableErr) => {
+        if (tableErr) {
+            console.log("Table creation failed");
+            throw tableErr;
+        }
+        console.log("Tasks table is ready");
+    });
 });
 
 /* -------------------- ROUTES -------------------- */
